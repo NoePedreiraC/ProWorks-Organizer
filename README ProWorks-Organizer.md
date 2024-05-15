@@ -1,4 +1,5 @@
 # ProWorks-Organizer
+![image](https://github.com/NoePedreiraC/ProWorks-Organizer/assets/145000797/6e91f71d-aebc-4529-b999-1c90820a5e8f)
 
 ## Índice
 - [Descripción del Proyecto y ámbito de implementación](#-descripción-del-proyecto-y-ámbito-de-implementación)
