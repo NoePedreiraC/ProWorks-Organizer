@@ -62,4 +62,5 @@ Noé Pedreira Centoira
 Noé Pedreira Centoira
 
 ## 📜 Licencia
-[Indicar la licencia utilizada, por ejemplo: MIT License]
+![image](https://github.com/NoePedreiraC/ProWorks-Organizer/assets/145000797/8d87e2d5-6141-4a85-8ce2-ee5287b96c15)
+
