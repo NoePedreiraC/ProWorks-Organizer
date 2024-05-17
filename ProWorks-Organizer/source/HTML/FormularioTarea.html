@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="../../include/jquery/jquery-3.7.1.min.js"></script>
+  <script src="../../include/jquery/jquery-ui.min.js"></script>
+  <script src="/source/JS/ejemploDatepicker.js"></script>
+  <link rel="stylesheet" href="/source/CSS/FormularioEstilosGenerico.css">
+  <link rel="stylesheet" href="/source/CSS/Calendario.css">
+
+  <title>Formulario con Listado de Tareas</title>
+  
+</head>
+<body>
+
+  <form>
+    <h2>Listado de Tareas</h2>
+    <ul id="listaElementos">
+    
+    </ul>
+    <label id="elemento">Nueva Tarea:</label>
+    <input type="hidden" id="Identificador" name="elemento" >
+
+    <input type="text" id="idTrabajo_Tarea" name="elemento" placeholder="idTrabajo_Tarea">
+    <input type="text" id="idPadre_Tarea" name="elemento" placeholder="idPadre_Tarea">
+    <input type="text" id="idDepartamento_Tarea" name="elemento" placeholder="idDepartamento_Tarea">
+    <input type="text" id="idCreador_Tarea" name="elemento" placeholder="idCreador_Tarea">
+    <input type="text" id="rutaArchivos_Tarea" name="elemento" placeholder="rutaArchivos_Tarea">
+    <input type="text" id="nombre_Tarea" name="elemento" placeholder="nombre_Tarea">
+    <input type="text" id="unidadesArchivo_Tarea" name="elemento" placeholder="unidadesArchivo_Tarea">
+    <input type="text" id="unidadesTotales_Tarea" name="elemento" placeholder="unidadesTotales_Tarea">
+    <input type="text" id="cadena_Tarea" name="elemento" placeholder="cadena_Tarea">
+    <input type="text" id="idCliente_Tarea" name="elemento" placeholder="idCliente_Tarea">
+    <input type="text" id="concepto_Tarea" name="elemento" placeholder="concepto_Tarea">
+    <input type="datetime" id="fechaCreacion_Tarea" name="elemento" placeholder="fechaCreacion_Tarea">
+    <input type="datetime" id="fechaInicio_Tarea" name="elemento" placeholder="fechaInicio_Tarea">
+    <input type="datetime" id="fechaFin_Tarea" name="elemento" placeholder="fechaFin_Tarea">
+    <input type="text" id="tiempoExtra_Tarea" name="elemento" placeholder="tiempoExtra_Tarea en min">
+    <input type="text" id="observaciones_Tarea" name="elemento" placeholder="observaciones_Tarea">
+    
+    <button type="button" id="agregar" name="accion" value="nuevo">Agregar</button>
+
+  </form>
+
+  <script>
+    $(document).ready(function(){
+      var contador = 1;
+
+      $('#fechaInicio_Tarea, #fechaFin_Tarea, #fechaCreacion_Tarea').datepicker({
+          timepicker: true,
+          controlType: 'select',
+          timeFormat: 'HH:mm',
+          dateFormat: 'yy-mm-dd' 
+      });
+
+      $('#agregar').click(function(){
+        var idPadre_Tarea = $('#idPadre_Tarea').val();
+        var idTrabajo_Tarea = $('#idTrabajo_Tarea').val();
+        var idDepartamento_Tarea = $('#idDepartamento_Tarea').val();
+        var idCreador_Tarea = $('#idCreador_Tarea').val();
+        var rutaArchivos_Tarea = $('#rutaArchivos_Tarea').val();
+        var nombre_Tarea = $('#nombre_Tarea').val();
+        var cadena_Tarea = $('#cadena_Tarea').val();
+        var unidadesArchivo_Tarea = $('#unidadesArchivo_Tarea').val();
+        var unidadesTotales_Tarea = $('#unidadesTotales_Tarea').val();
+        var idCliente_Tarea = $('#idCliente_Tarea').val();
+        var concepto_Tarea = $('#concepto_Tarea').val();
+        var fechaCreacion_Tarea = $('#fechaCreacion_Tarea').val();
+        var fechaInicio_Tarea = $('#fechaInicio_Tarea').val();
+        var fechaFin_Tarea = $('#fechaFin_Tarea').val();
+        var tiempoExtra_Tarea = $('#tiempoExtra_Tarea').val();
+        var observaciones_Tarea = $('#observaciones_Tarea').val();
+
+        
+       
+        if(idTrabajo_Tarea != '' && idDepartamento_Tarea != '' && idCreador_Tarea != '' && nombre_Tarea != '' &&  cadena_Tarea != '' && idCliente_Tarea != ''){
+            var elemento = '<li>' + contador + '. idTrabajo_Tarea:  ' + idTrabajo_Tarea + '. idPadre_Tarea:  ' + idPadre_Tarea + '  idDepartamento_Tarea: ' + idDepartamento_Tarea + '  idCreador_Tarea: ' + idCreador_Tarea + '  rutaArchivos_Tarea: ' + rutaArchivos_Tarea + '  nombre_Tarea: ' + nombre_Tarea +  '  unidadesArchivo_Tarea: ' + unidadesArchivo_Tarea +  '  unidadesTotales_Tarea: ' + unidadesTotales_Tarea +  '  cadena_Tarea: ' + cadena_Tarea + '  idCliente_Tarea: ' + idCliente_Tarea +  '  concepto_Tarea: ' + concepto_Tarea +  '  fechaCreacion_Tarea: ' + fechaCreacion_Tarea +  '  fechaInicio_Tarea: ' + fechaInicio_Tarea +  '  fechaFin_Tarea: ' + fechaFin_Tarea +  '  tiempoExtra_Tarea: ' + tiempoExtra_Tarea +  '  observaciones_Tarea: ' + observaciones_Tarea +  '</li>';
+            $('#listaElementos').append(elemento);
+            contador++;
+            $('#idTrabajo_Tarea').val('');
+            $('#idPadre_Tarea').val('');
+            $('#idDepartamento_Tarea').val('');
+            $('#idCreador_Tarea').val('');
+            $('#rutaArchivos_Tarea').val('');
+            $('#nombre_Tarea').val('');
+            $('#unidadesArchivo_Tarea').val('');
+            $('#unidadesTotales_Tarea').val(''); 
+            $('#cadena_Tarea').val('');
+            $('#idCliente_Tarea').val('');
+            $('#concepto_Tarea').val('');
+            $('#fechaCreacion_Tarea').val('');
+            $('#fechaInicio_Tarea').val('');
+            $('#fechaFin_Tarea').val('');
+            $('#tiempoExtra_Tarea').val('');
+            $('#observaciones_Tarea').val('');
+            $.post("../PHP/tareas_tools.php", { accion:"nuevo", idTrabajo_Tarea: idTrabajo_Tarea , idPadre_Tarea: idPadre_Tarea , idDepartamento_Tarea: idDepartamento_Tarea, idCreador_Tarea: idCreador_Tarea, rutaArchivos_Tarea: rutaArchivos_Tarea, nombre_Tarea: nombre_Tarea, unidadesArchivo_Tarea: unidadesArchivo_Tarea, unidadesTotales_Tarea: unidadesTotales_Tarea, cadena_Tarea: cadena_Tarea, idCliente_Tarea: idCliente_Tarea, concepto_Tarea: concepto_Tarea, fechaCreacion_Tarea: fechaCreacion_Tarea, fechaInicio_Tarea: fechaInicio_Tarea, fechaFin_Tarea: fechaFin_Tarea, tiempoExtra_Tarea: tiempoExtra_Tarea, observaciones_Tarea: observaciones_Tarea }).done(function( data ) {
+              console.log(data);
+            });
+        } else {
+            alert('Por favor, completa todos los campos obligatorios.');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
