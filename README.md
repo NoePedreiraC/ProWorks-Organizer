@@ -61,9 +61,8 @@ Aqui te dejo el enlace a una explicacion detallada de como instalarlo:
 Noé Pedreira Centoira
 
 ## 👤 Personas Desarrolladoras del Proyecto
-Noé Pedreira Centoira!
 <img src="https://github.com/NoePedreiraC/ProWorks-Organizer/assets/145000797/86a28f5a-787a-4b82-9ee2-666886e85b05" alt="FotoCurriculum2" height="200">
-
+Noé Pedreira Centoira!
 
 
 ## 📜 Licencia
