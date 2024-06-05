@@ -47,7 +47,7 @@ Para poder utilizar el proyecto te recomiendo que instales wampserver.
 
 Aqui te dejo el enlace a una explicacion detallada de como instalarlo:
 
-[AQUI!!!](https://github.com/NoePedreiraC/ProWorks-Organizer/blob/main/README.md)
+[AQUI!!!]([https://github.com/NoePedreiraC/ProWorks-Organizer/blob/main/README.md](https://github.com/NoePedreiraC/ProWorks-Organizer/blob/main/Instalacion%20de%20WampServer.md))
 
 
 
