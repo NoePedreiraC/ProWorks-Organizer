@@ -62,7 +62,7 @@ Noé Pedreira Centoira
 
 ## 👤 Personas Desarrolladoras del Proyecto
 Noé Pedreira Centoira!
-[Noé Pedreira Centoira](https://github.com/NoePedreiraC/ProWorks-Organizer/assets/145000797/5c9fab22-c520-4b02-8456-c1f312a3bf38)
+![FotoCurriculum2](https://github.com/NoePedreiraC/ProWorks-Organizer/assets/145000797/86a28f5a-787a-4b82-9ee2-666886e85b05)
 
 
 ## 📜 Licencia
