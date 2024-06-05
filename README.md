@@ -41,7 +41,7 @@ La aplicación almacenará información relacionada con tareas y proyectos, incl
 - Otras funcionalidades...
 
 ## 📁 Acceso al Proyecto
-El código fuente del proyecto estará disponible en [enlace al repositorio] una vez finalizado.
+El código fuente del proyecto estará disponible en [enlace al repositorio](https://github.com/NoePedreiraC/ProWorks-Organizer/tree/main/ProWorks-Organizer) una vez finalizado.
 
 Para poder utilizar el proyecto te recomiendo que instales wampserver. 
 
@@ -61,7 +61,9 @@ Aqui te dejo el enlace a una explicacion detallada de como instalarlo:
 Noé Pedreira Centoira
 
 ## 👤 Personas Desarrolladoras del Proyecto
-Noé Pedreira Centoira
+Noé Pedreira Centoira!
+[Noé Pedreira Centoira](https://github.com/NoePedreiraC/ProWorks-Organizer/assets/145000797/5c9fab22-c520-4b02-8456-c1f312a3bf38)
+
 
 ## 📜 Licencia
 ![image](https://github.com/NoePedreiraC/ProWorks-Organizer/assets/145000797/8d87e2d5-6141-4a85-8ce2-ee5287b96c15)
