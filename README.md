@@ -49,9 +49,7 @@ Aqui te dejo el enlace a una explicacion detallada de como instalarlo:
 
 [AQUI!!!](https://github.com/NoePedreiraC/ProWorks-Organizer/blob/main/Instalacion%20de%20WampServer.md)
 
-**Ojo** Si tienes problemas con la base de datos comprueba en la carpeta Include dentro de la Carpeta Clases de el archivo **conexion.php** dado que es el archivo que de encarga de conectarse con la base de datos.
-
-
+**OJO** Si tienes problemas con la base de datos comprueba en la carpeta Include dentro de la Carpeta Clases de el archivo **conexion.php** dado que es el archivo que de encarga de conectarse con la base de datos.
 
 ## 🛠️ Tecnologías Utilizadas
 - JavaScript
