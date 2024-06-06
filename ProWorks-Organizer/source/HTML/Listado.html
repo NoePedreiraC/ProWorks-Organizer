@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mostrar Tareas</title>
+<script src="../../include/jquery/jquery-3.7.1.min.js"></script>
+<script src="../../include/jquery/jquery-ui.min.js"></script>
+<script src="../JS/ejemploDatepicker.js"></script>
+<link rel="stylesheet" href="../CSS/Listado.css">
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="../JS/listado.js"></script>
+
+<script src="../JS/calcularTiempo.js"></script>
+<script src="../../include/moment/moment-with-locales.min.js"></script>
+<script src="../JS/waitFor.js"></script>
+
+
+</head>
+
+<body>
+    <h2>Listado de Tareas</h2>
+    <div id="tareas"></div>
+
+
+    <!-- Popup Agregar -->
+    <div id="popup-formulario" title=" Agregar Tarea">
+        <form id="formulario-tarea">
+
+                    
+            <div class="form-container">
+                <div class="form-column">
+
+                    <input type="hidden" id="idTarea" name="idTarea">
+
+                    <input type="hidden" id="idTrabajo_Tarea" name="idTrabajo_Tarea">
+
+                    <input type="hidden" id="idDepartamento_Tarea" name="idDepartamento_Tarea">
+
+                    <label for="nombre_Tarea">Nombre:</label>
+                    <input type="text" id="nombre_Tarea" name="nombre_Tarea">
+
+                    <label for="unidadesArchivo_Tarea">Unidades Archivo:</label>
+                    <input type="text" id="unidadesArchivo_Tarea" name="unidadesArchivo_Tarea">
+
+                    <label for="cadena_Tarea">Cadena:</label>
+                    <input type="text" id="cadena_Tarea" name="cadena_Tarea">
+
+                    <label for="concepto_Tarea">Concepto:</label>
+                    <input type="text" id="concepto_Tarea" name="concepto_Tarea">
+
+                    <label for="fechaInicio_Tarea">Fecha de Inicio:</label>
+                    <input type="text" id="fechaInicio_Tarea" name="fechaInicio_Tarea">
+
+                    <label for="tiempoExtra_Tarea">Tiempo Extra:</label>
+                    <input type="text" id="tiempoExtra_Tarea" name="tiempoExtra_Tarea">
+
+                    <label for="maquinaTarea">Maquina: </label>
+                    <input type="text" id="maquinaTarea" name="maquinaTarea" id="nombreMaquina">
+
+                    <label for="materialTareaTipo">TipoMaterial:</label>
+                    <input type="text" id="materialTareaTipo" name="materialTareaTipo" id="TipoMaterial">
+
+                    <label for="materialTarea">Material:</label>
+                    <input type="text"   id="materialTarea" name="materialTarea" id="nombreMaterial">   
+
+                    <label id="listaDeMaquinas">Lista de Maquinas: </label>
+                </div>
+
+                <div class="form-column">
+
+                    <input type="hidden" id="idPadre_Tarea" name="idPadre_Tarea">
+
+                    <input type="hidden" id="idCreador_Tarea" name="idCreador_Tarea">
+
+                    <label for="rutaArchivos_Tarea">Ruta del Archivo:</label>
+                    <input type="text" id="rutaArchivos_Tarea" name="rutaArchivos_Tarea">
+
+                    <label for="unidadesTotales_Tarea">Unidades Totales:</label>
+                    <input type="text" id="unidadesTotales_Tarea" name="unidadesTotales_Tarea">
+
+                    <label for="idCliente_Tarea">Clientes:</label>
+                    <input type="text" id="idCliente_Tarea" name="idCliente_Tarea">
+
+                    <label for="fechaCreacion_Tarea">Fecha de Creacion:</label>
+                    <input type="text" id="fechaCreacion_Tarea" name="fechaCreacion_Tarea">
+
+                    <label for="fechaFin_Tarea">Fecha de Fin:</label>
+                    <input type="text" id="fechaFin_Tarea" name="fechaFin_Tarea">
+
+                    <label for="observaciones_Tarea">Observaciones:</label>
+                    <input type="text" id="observaciones_Tarea" name="observaciones_Tarea">
+
+                    <button type="button" id="ValidarMaquina" class="ValidarMaquina">validar Maquina</button>
+                    
+                    <button type="button" id="ValidarMaterial" class="ValidarMaterial">validar Material</button>
+                    <input type="hidden" id="ListadoMaterialTarea" name="ListadoMaterialTarea">
+
+                    <input type="hidden" id="ListadoMaquinaTarea" name="ListadoMaquinaTarea" >
+
+                    <label id="listaDeMateriales">Lista de Material:</label>
+
+                </div>
+            </div>
+            
+        </form>
+    </div>
+
+    <!-- Popup Modificar -->
+    <div id="popup-formularioM" title=" Modificar Tarea">
+        <form id="formulario-tareaM">
+
+                    
+            <div class="form-container">
+                <div class="form-column">
+
+                    <input type="hidden" id="idTareaM" name="idTarea">
+
+                    <input type="hidden" id="idTrabajo_TareaM" name="idTrabajo_Tarea">
+
+                    <input type="hidden" id="idDepartamento_TareaM" name="idDepartamento_Tarea">
+
+                    <label for="nombre_Tarea">Nombre:</label>
+                    <input type="text" id="nombre_TareaM" name="nombre_Tarea">
+
+                    <label for="unidadesArchivo_Tarea">Unidades Archivo:</label>
+                    <input type="text" id="unidadesArchivo_TareaM" name="unidadesArchivo_Tarea">
+
+                    <label for="cadena_Tarea">Cadena:</label>
+                    <input type="text" id="cadena_TareaM" name="cadena_Tarea">
+
+                    <label for="concepto_Tarea">Concepto:</label>
+                    <input type="text" id="concepto_TareaM" name="concepto_Tarea">
+
+                    <label for="fechaInicio_Tarea">Fecha de Inicio:</label>
+                    <input type="text" id="fechaInicio_TareaM" name="fechaInicio_Tarea">
+
+                    <label for="tiempoExtra_Tarea">Tiempo Extra:</label>
+                    <input type="text" id="tiempoExtra_TareaM" name="tiempoExtra_Tarea">
+
+                    <label for="maquinaTarea">Maquina: </label>
+                    <input type="text" id="maquinaTareaM" name="maquinaTarea" id="nombreMaquina">
+
+                    <label for="materialTareaTipo">TipoMaterial:</label>
+                    <input type="text" id="materialTareaTipoM" name="materialTareaTipo" id="TipoMaterial">
+
+                    <label for="materialTarea">Material:</label>
+                    <input type="text"   id="materialTareaM" name="materialTarea" id="nombreMaterial">   
+
+                    <label id="listaDeMaquinas">Lista de Maquinas: </label>
+                </div>
+
+                <div class="form-column">
+
+                    <input type="hidden" id="idPadre_TareaM" name="idPadre_Tarea">
+
+                    <input type="hidden" id="idCreador_TareaM" name="idCreador_Tarea">
+
+                    <label for="rutaArchivos_Tarea">Ruta del Archivo:</label>
+                    <input type="text" id="rutaArchivos_TareaM" name="rutaArchivos_Tarea">
+
+                    <label for="unidadesTotales_Tarea">Unidades Totales:</label>
+                    <input type="text" id="unidadesTotales_TareaM" name="unidadesTotales_Tarea">
+
+                    <label for="idCliente_Tarea">Clientes:</label>
+                    <input type="text" id="idCliente_TareaM" name="idCliente_Tarea">
+
+                    <label for="fechaCreacion_Tarea">Fecha de Creacion:</label>
+                    <input type="text" id="fechaCreacion_TareaM" name="fechaCreacion_Tarea">
+
+                    <label for="fechaFin_Tarea">Fecha de Fin:</label>
+                    <input type="text" id="fechaFin_TareaM" name="fechaFin_Tarea">
+
+                    <label for="observaciones_Tarea">Observaciones:</label>
+                    <input type="text" id="observaciones_TareaM" name="observaciones_Tarea">
+
+                    <button type="button" id="ValidarMaquinaM" class="ValidarMaquina">validar Maquina</button>
+                    
+                    <button type="button" id="ValidarMaterialM" class="ValidarMaterial">validar Material</button>
+                    <input type="hidden" id="ListadoMaterialTareaM" name="ListadoMaterialTarea">
+
+                    <input type="hidden" id="ListadoMaquinaTareaM" name="ListadoMaquinaTarea" >
+
+                    <label id="listaDeMateriales">Lista de Material:</label>
+
+                </div>
+            </div>
+            
+        </form>
+    </div> 
+
+
+
+     <!-- Popup Visualizar -->
+     <div id="popup-formularioV" title=" Visualizar Tarea">
+        <form id="formulario-tareaV">
+
+                    
+            <div class="form-container">
+                <div class="form-column">
+
+                    <input type="hidden" id="idTareaV" name="idTarea">
+
+                    <input type="hidden" id="idTrabajo_TareaV" name="idTrabajo_Tarea">
+
+                    <input type="hidden" id="idDepartamento_TareaV" name="idDepartamento_Tarea">
+
+                    <label for="nombre_Tarea">Nombre:</label>
+                    <input type="text" id="nombre_TareaV" name="nombre_Tarea" readonly>
+
+                    <label for="unidadesArchivo_Tarea">Unidades Archivo:</label>
+                    <input type="text" id="unidadesArchivo_TareaV" name="unidadesArchivo_Tarea"readonly>
+
+                    <label for="cadena_Tarea">Cadena:</label>
+                    <input type="text" id="cadena_TareaV" name="cadena_Tarea"readonly>
+
+                    <label for="concepto_Tarea">Concepto:</label>
+                    <input type="text" id="concepto_TareaV" name="concepto_Tarea"readonly>
+
+                    <label for="fechaInicio_Tarea">Fecha de Inicio:</label>
+                    <input type="text" id="fechaInicio_TareaV" name="fechaInicio_Tarea"readonly>
+
+                    <label for="tiempoExtra_Tarea">Tiempo Extra:</label>
+                    <input type="text" id="tiempoExtra_TareaV" name="tiempoExtra_Tarea"readonly>
+
+                    <label for="maquinaTarea">Maquina: </label>
+                    <input type="text" id="maquinaTareaV" name="maquinaTarea" id="nombreMaquina"readonly>
+
+                    <label for="materialTareaTipo">TipoMaterial:</label>
+                    <input type="text" id="materialTareaTipoV" name="materialTareaTipo" id="TipoMaterial"readonly>
+
+                    <label for="materialTarea">Material:</label>
+                    <input type="text"   id="materialTareaV" name="materialTarea" id="nombreMaterial"readonly>   
+
+                    <label id="listaDeMaquinasV">Lista de Maquinas: </label>
+                </div>
+
+                <div class="form-column">
+                    <input type="hidden" id="idPadre_TareaV" name="idPadre_Tarea"readonly>
+
+                    <input type="hidden" id="idCreador_TareaV" name="idCreador_Tarea"readonly>
+
+                    <label for="rutaArchivos_Tarea">Ruta del Archivo:</label>
+                    <input type="text" id="rutaArchivos_TareaV" name="rutaArchivos_Tarea"readonly>
+
+                    <label for="unidadesTotales_Tarea">Unidades Totales:</label>
+                    <input type="text" id="unidadesTotales_TareaV" name="unidadesTotales_Tarea"readonly>
+
+                    <label for="idCliente_Tarea">Clientes:</label>
+                    <input type="text" id="idCliente_TareaV" name="idCliente_Tarea"readonly>
+
+                    <label for="fechaCreacion_Tarea">Fecha de Creacion:</label>
+                    <input type="text" id="fechaCreacion_TareaV" name="fechaCreacion_Tarea"readonly>
+
+                    <label for="fechaFin_Tarea">Fecha de Fin:</label>
+                    <input type="text" id="fechaFin_TareaV" name="fechaFin_Tarea"readonly>
+
+                    <label for="observaciones_Tarea">Observaciones:</label>
+                    <input type="text" id="observaciones_TareaV" name="observaciones_Tarea"readonly>
+
+                    <button type="button" id="ValidarMaquinaV" class="ValidarMaquina">validar Maquina</button>
+                    
+                    <button type="button" id="ValidarMaterialV" class="ValidarMaterial">validar Material</button>
+                    <input type="hidden" id="ListadoMaterialTareaV" name="ListadoMaterialTarea">
+
+                    <input type="hidden" id="ListadoMaquinaTareaV" name="ListadoMaquinaTarea" >
+
+                    <label id="listaDeMateriales">Lista de Material:</label>
+
+                </div>
+            </div>
+            
+        </form>
+    </div> 
+
+    <button id="agregarTareaBtn">Agregar Tarea</button>
+
+    </body>
+</html>

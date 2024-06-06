@@ -1,0 +1,102 @@
+/* Estilo para el contenedor del formulario */
+.form-container {
+  width: 400px;
+  margin: 0 auto;
+}
+
+/* Estilo para el formulario */
+.form {
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Estilo para los campos de entrada */
+.input-field {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box; /* Para incluir el padding en el ancho total */
+}
+
+/* Estilo para el botón de envío */
+.submit-btn {
+  width: 100%;
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 0;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Estilo para el botón de envío al pasar el ratón */
+.submit-btn:hover {
+  background-color: #45a049;
+}/* Estilo para el formulario */
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+/* Estilo para el título del formulario */
+h2 {
+  margin-top: 10;
+}
+
+/* Estilo para la lista de elementos */
+#listaElementos {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Estilo para los elementos de la lista */
+#listaElementos li {
+  margin-bottom: 10px;
+  padding: 5px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Estilo para las etiquetas del formulario */
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+/* Estilo para los campos de entrada */
+input[type="text"] {
+  width: calc(100% - 12px);
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+/* Estilo para el botón de agregar */
+#agregarMaquina {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4caf50;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Estilo para el botón de agregar al pasar el ratón */
+#agregarMaquina:hover {
+  background-color: #45a049;
+}
+

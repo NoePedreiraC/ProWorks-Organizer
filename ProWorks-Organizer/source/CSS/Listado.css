@@ -1,0 +1,283 @@
+h2 {
+    text-align: center;
+    text-shadow: 1px solid black;
+}
+
+/* Estilo para la tabla de tareas */
+.tareas-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center; 
+    border-radius: 10px;
+}
+
+/* Estilo para las celdas de la tabla */
+.tareas-table th, .tareas-table td {
+    padding: 10px;
+}
+
+/* Estilo para el encabezado de la tabla */
+.tareas-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+   
+}
+
+/* Estilo para alternar el color de fondo de las filas */
+.tareas-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Estilo para los botones */
+.btn {
+    padding: 8px 16px;
+    margin: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+
+/* Estilo para el botón de agregar nueva tarea */
+#agregarTareaBtn {
+    background-color: #28a745;
+    color: #fff;
+    text-align: right;
+}
+
+#agregarTareaBtn:hover {
+    background-color: #218838;
+}
+
+.scroll-container {
+    width: 350px;
+    height: 100px; 
+    overflow-y: auto; 
+    scroll-behavior: smooth;
+  
+  }
+  .scroll-div {
+    max-width: 550px;
+    max-height: 150px; 
+    overflow-y: auto; 
+    scroll-behavior: smooth;
+  }
+  .scroll-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-size: 1em; 
+  }
+  .agregarTareaBtn{
+
+  background-color: #13aa52;
+  border: 1px solid #13aa52;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-family: "Akzidenz Grotesk BQ Medium", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  outline: none;
+  outline: 0;
+  padding: 10px 250px;
+  text-align: center;
+  transform: translateY(0);
+  transition: transform 150ms, box-shadow 150ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  
+}
+
+.button-37:hover {
+  box-shadow: rgba(0, 0, 0, .15) 0 3px 9px 0;
+  transform: translateY(-2px);
+}
+
+@media (min-width: 768px) {
+  .button-37 {
+    padding: 10px 30px;
+  }
+}
+
+  
+
+ /* Estilo para las tareas padres */
+.tareas-table tbody tr.padre {
+    background-color: #7E96A0; /* Color de fondo para las tareas padres */
+    border-top: 10px solid #fff;
+    border-radius: 5px;
+}
+
+/* Estilo para las tareas hijas */
+.tareas-table tbody tr.hija {
+    margin-left: 10px; /* Agrega un margen izquierdo de 10px */
+    background-color: #9AAEB5; /* Color de fondo para las tareas hijas */
+    border: 2px solid white !important;
+    
+
+}
+/*_______________________________________________________________________________________________________________________________________________________*/
+
+.form-container {
+    display: flex;
+    justify-content: space-between; 
+}
+
+
+.form-column {
+    flex: 1;
+    margin-right: 20px; 
+    text-align: center;
+}
+
+
+.form-column input[type="text"] {
+    width: calc(100% - 10px); 
+    padding: 5px;
+    margin-bottom: 10px;
+}
+.ValidarMaquina {
+    padding: 9px 29px !important; 
+    background-color: #007bff; 
+    color: #fff; 
+    border: none; 
+    border-radius: 4px; 
+    cursor: pointer; 
+    font-size: 15px !important; 
+    margin-top: 27px; 
+    width: 326px !important;
+}
+
+.ValidarMaterial {
+    padding: 9px 29px !important; 
+    background-color: #007bff; 
+    color: #fff; 
+    border: none; 
+    border-radius: 4px; 
+    cursor: pointer; 
+    font-size: 15px !important;
+    margin-top: 105px; 
+    width: 326px !important;
+    margin-bottom: 5px;
+}
+
+
+.ValidarMaquina:hover, .ValidarMaterial:hover {
+    background-color: #0056b3; /* Cambia el color de fondo al pasar el ratón */
+}
+
+
+/*--------------------POPUP-----------------------------------------------------*/
+
+#popup-formulario, #popup-formularioM, #popup-formularioV, #popup-agrupar {
+    display: none;
+}
+
+#popup-formulario label, #popup-formularioM label, #popup-formularioV label, #popup-agrupar label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#popup-formulario input[type="text"], #popup-formularioM input[type="text"], #popup-formularioV input[type="text"], #popup-agrupar input[type="text"] {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+#popup-formulario button, #popup-formularioM button, #popup-formularioV button{
+    padding: 10px;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#popup-agrupar button{
+    padding: 9px 29px !important; /* Ajusta el padding para que se vean más proporcionados */
+    background-color: #007bff; /* Color de fondo azul */
+    color: #fff; /* Color de texto blanco */
+    border: none; /* Sin borde */
+    border-radius: 4px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor tipo puntero al pasar sobre ellos */
+    font-size: 15px !important; /* Tamaño de fuente */
+    margin-top: 105px; /* Espacio superior */
+    width: 326px !important;
+    margin-bottom: 5px;
+}
+
+/*___________________________________________________________________________________________________*/
+.group-btn {
+    background: #fff;
+    backface-visibility: hidden;
+    border-radius: 8px; /* 0.25rem a px */
+    border-style: solid;
+    border-width: 1px; /* 0.0625rem a px */
+    box-sizing: border-box;
+    color: #212121;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Circular, Helvetica, sans-serif;
+    font-size: 15px; /* 1rem a px */
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    line-height: 1.3;
+    padding: 7px 11px; /* 0.5rem y 0.75rem a px */
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transform: translateZ(0) scale(1);
+    transition: transform 0.2s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.group-btn:not(:disabled):hover {
+    transform: scale(1.05);
+}
+
+.group-btn:not(:disabled):hover:active {
+    transform: scale(1.05) translateY(2px); /* 0.125rem a px */
+}
+
+.group-btn:focus {
+    outline: 0 solid transparent;
+}
+
+.group-btn:focus:before {
+    content: "";
+    left: -5px; /* calc(-1 * 0.25rem) a px */
+    pointer-events: none;
+    position: absolute;
+    top: -10px; /* calc(-1 * 0.25rem) a px */
+    transition: border-radius;
+    user-select: none;
+}
+
+.group-btn:focus:not(:focus-visible) {
+    outline: 0 solid transparent;
+}
+
+.group-btn:focus:not(:focus-visible):before {
+    border-width: 0;
+}
+
+.group-btn:not(:disabled):active {
+    transform: translateY(6px); /* 0.125rem a px */
+}
+
+/*___________________________________________________________________________________________________*/
+ul.ui-autocomplete {
+    z-index: 1100;
+}
